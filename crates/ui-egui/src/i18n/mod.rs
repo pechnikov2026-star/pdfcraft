@@ -2588,6 +2588,27 @@ mod tests {
         assert!(tr(ko, warning).contains("영구적으로 제거됩니다"));
     }
 
+    /// Search & Redact marks all matches but does not apply permanent redaction.
+    /// "Show all" is the unrelated comment-visibility action.
+    #[test]
+    fn korean_mark_all_is_not_comments_show_all() {
+        let ko = Lang::from_code("ko").expect("ko registered");
+        assert_eq!(tr(ko, "Mark all"), "모두 제거 대상으로 표시");
+        assert_eq!(tr(ko, "Show all"), "모두 표시");
+        assert_ne!(tr(ko, "Mark all"), tr(ko, "Show all"));
+    }
+
+    /// Sanitize removes hidden PDF data; Clean Up selects an optimizer tab.
+    /// The confirmation title and action label must communicate the same effect.
+    #[test]
+    fn korean_sanitize_is_not_optimizer_clean_up() {
+        let ko = Lang::from_code("ko").expect("ko registered");
+        assert_eq!(tr(ko, "Sanitize"), "숨겨진 정보 제거");
+        assert_eq!(tr(ko, "Sanitize document"), "문서에서 숨겨진 정보 제거");
+        assert_eq!(tr(ko, "Clean Up"), "정리");
+        assert_ne!(tr(ko, "Sanitize"), tr(ko, "Clean Up"));
+    }
+
     /// Hindi and Korean translate every registered command and every All tools group, section
     /// and item.
     #[test]

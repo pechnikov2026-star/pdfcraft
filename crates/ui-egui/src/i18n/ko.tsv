@@ -385,7 +385,7 @@
 	Redact pages	페이지 내용 제거 대상 표시
 	Find text and redact	텍스트를 찾아 제거 대상으로 표시
 	Set properties	속성 설정
-	Sanitize document	문서 정리
+	Sanitize document	문서에서 숨겨진 정보 제거
 	Compress a PDF	PDF 압축
 	Optimize	최적화
 	Reduce file size	파일 크기 줄이기
@@ -482,8 +482,8 @@
 	Apply	적용
 	Run	실행
 	Clear	지우기
-	Sanitize	정리
-	Mark all	모두 표시
+	Sanitize	숨겨진 정보 제거
+	Mark all	모두 제거 대상으로 표시
 	Save changes to “{name}” before closing?	닫기 전에 “{name}”의 변경 사항을 저장하시겠습니까?
 	Your changes will be lost if you don't save them.	저장하지 않으면 변경 사항이 손실됩니다.
 	Password required	암호 필요
