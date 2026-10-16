@@ -2588,6 +2588,67 @@ mod tests {
         assert!(tr(ko, warning).contains("영구적으로 제거됩니다"));
     }
 
+    /// Certify is a document-certification signature (DocMDP), not general
+    /// identity verification or the ordinary digital-signing command.
+    #[test]
+    fn korean_document_certification_is_distinct_from_signing() {
+        let ko = Lang::from_code("ko").expect("ko registered");
+        assert_eq!(tr(ko, "Certify"), "문서 인증");
+        assert_eq!(tr(ko, "Certify (visible signature)"), "문서 인증(서명 표시)");
+        assert_eq!(tr(ko, "Certify (invisible signature)"), "문서 인증(서명 표시 안 함)");
+        assert_eq!(tr(ko, "Permitted actions after certifying"), "문서 인증 후 허용되는 변경 사항");
+        assert_eq!(tr(ko, "Digitally sign"), "디지털 서명");
+        assert_eq!(tr(ko, "No changes allowed"), "변경 허용 안 함");
+    }
+
+    /// An unknown/trust-related outcome is not an invalid digital signature.
+    /// Preserve explicit "verification" language in the security diagnostics.
+    #[test]
+    fn korean_signature_and_timestamp_verification_warnings_are_explicit() {
+        let ko = Lang::from_code("ko").expect("ko registered");
+        assert_eq!(tr(ko, "Signature validity is UNKNOWN:"), "서명 유효성을 알 수 없습니다:");
+        assert_eq!(tr(ko, "Signature is INVALID:"), "서명이 유효하지 않습니다:");
+        assert_eq!(tr(ko, "The signature could not be verified ({})."), "서명을 검증할 수 없습니다({}).");
+        assert_eq!(tr(ko, "The signature's timestamp token could not be verified ({})."), "서명의 타임스탬프 토큰을 검증할 수 없습니다({}).");
+        let warning = concat!(
+            "The signature carries an unverified timestamp ({}): ",
+            "the timestamp authority is not in your list of trusted certificates, ",
+            "so the signing time claimed by the signer is used instead."
+        );
+        let translated = tr(ko, warning);
+        assert!(translated.contains("신뢰성이 검증되지 않았습니다"));
+        assert!(translated.contains("서명자가 주장하는 서명 시간"));
+        assert_eq!(translated.matches("{}").count(), 1);
+    }
+
+    /// A digest can verify for backward compatibility yet be unfit for trust.
+    /// Never turn that caution into a reassuring "validated" badge in Korean.
+    #[test]
+    fn korean_weak_digest_warnings_keep_security_caution() {
+        let ko = Lang::from_code("ko").expect("ko registered");
+        for (algorithm, english) in [
+            (
+                "SHA-1",
+                concat!(
+                    "This signature uses SHA-1, a weak hash algorithm: collisions in it have been demonstrated. ",
+                    "It still validates because many documents signed years ago use it, but it should not be relied on."
+                ),
+            ),
+            (
+                "RIPEMD-160",
+                concat!(
+                    "This signature uses RIPEMD-160, a legacy 160-bit hash algorithm that is no longer recommended for signatures. ",
+                    "It still validates, but it should not be relied on."
+                ),
+            ),
+        ] {
+            let warning = tr(ko, english);
+            assert!(warning.contains(algorithm), "Missing algorithm name: {algorithm}");
+            assert!(warning.contains("유효성 검사를 통과"), "No explanation of legacy validation: {algorithm}");
+            assert!(warning.contains("신뢰해서는 안 됩니다"), "No explicit trust warning: {algorithm}");
+        }
+    }
+
     /// Hindi and Korean translate every registered command and every All tools group, section
     /// and item.
     #[test]
