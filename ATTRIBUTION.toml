@@ -259,7 +259,7 @@ licence = "MIT OR Apache-2.0"
 licence_file = "LICENSE-MIT"
 kind = "translation"
 usage = "Korean UI strings, compiled in by crates/ui-egui/src/i18n/mod.rs"
-sha256 = "408e777db94b4d5807dba807f0ed82aee4fee6f99166c8fc2dc1b7dea0027f85"
+sha256 = "471746848da18b3d5fc48f79b770418303760ff1a6a301655545305e7cf6b638"
 
 
 [[asset]]
