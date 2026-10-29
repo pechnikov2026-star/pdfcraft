@@ -72,6 +72,8 @@
 	Single page	Satu halaman
 	Two-page view	Tampilan dua halaman
 	Continuous scrolling	Gulir terus-menerus
+	Show gaps between pages	Tampilkan jarak antarhalaman
+	Hide gaps to join page edges. Margins inside the PDF remain unchanged.	Sembunyikan jarak untuk menyambungkan tepi halaman. Margin di dalam PDF tidak berubah.
 	Page display	Tampilan halaman
 	Default page display	Tampilan halaman bawaan
 	Default zoom	Zoom bawaan
@@ -922,6 +924,8 @@
 	Redaction code:	Kode sensor:
 	Reload	Muat ulang
 	Reload documents when their files change on disk	Muat ulang dokumen saat file-nya berubah di disk
+	Don't show again	Jangan tampilkan lagi
+	Show a notice when a document is secured	Tampilkan pemberitahuan saat dokumen diamankan
 	Remove checkmark	Hapus centang
 	Remove invalid links and bookmarks	Hapus tautan dan bookmark yang tidak valid
 	Remove page	Hapus halaman
@@ -1007,6 +1011,15 @@
 	Scroll tabs right	Gulir tab ke kanan
 	Search comments	Cari komentar
 	Search tools and commands…	Cari alat dan perintah…
+
+# Accessible names for inputs that have no visible label.
+	Added text	Teks yang ditambahkan
+	Link URL	URL tautan
+	Search tools and commands	Cari alat dan perintah
+	Text editing line	Baris penyuntingan teks
+	Text to place	Teks yang akan ditempatkan
+	Tooltip	Tooltip
+	Words or phrases to redact	Kata atau frasa untuk disensor
 	Searchable Image (Exact)	Gambar yang Dapat Dicari (Tepat)
 	Searching… {s} of {p} pages	Mencari… {s} dari {p} halaman
 	Searching… {s}/{p}	Mencari… {s}/{p}
@@ -1217,6 +1230,7 @@
 	Update	Perbarui
 	Use 72 DPI (one point per pixel)	Gunakan 72 DPI (satu titik per piksel)
 	Use Flate to encode streams that are not encoded	Gunakan Flate untuk mengodekan stream yang belum dikodekan
+	In streams that use LZW encoding, use Flate instead	Pada stream yang memakai pengodean LZW, gunakan Flate sebagai gantinya
 	Use a Digital ID from a file	Gunakan ID Digital dari file
 	Use custom DPI	Gunakan DPI kustom
 	Use each image's embedded DPI; use 72 DPI when it is absent.	Gunakan DPI tertanam pada setiap gambar; gunakan 72 DPI jika tidak ada.
@@ -1388,6 +1402,10 @@
 	Draw freehand	Gambar bebas
 	Drawing	Gambar
 	Drawing scale	Skala gambar
+	Scale	Skala
+	Common scales	Skala umum
+	Enter a scale such as 1:50.	Masukkan skala seperti 1:50.
+	Applying a scale switches units to m / mm.	Menerapkan skala mengubah satuan menjadi m / mm.
 	Drop-down list	Daftar drop-down
 	Duplicate pages	Duplikat halaman
 	Edit a PDF	Edit PDF
@@ -2674,6 +2692,106 @@ key	Space	Space
 	Make properties default	Jadikan properti default
 	Pages selected	Halaman yang dipilih
 	Page properties	Properti halaman
+	Create & Edit	Buat & Edit
+	Review & Compare	Tinjau & Bandingkan
+	Forms & Signatures	Formulir & Tanda Tangan
+	Protect & Standardize	Lindungi & Standarkan
+	Customize & Automate	Sesuaikan & Otomatiskan
+	No tools match your search.	Tidak ada alat yang cocok dengan pencarian Anda.
+	Expand all tools	Perluas semua alat
+	Collapse all tools	Ciutkan semua alat
 	The password must have at least 8 characters.	Kata sandi harus memiliki minimal 8 karakter.
 theme	Appearance	Tampilan
 	Zoom — type a percentage and press Enter	Zoom — ketik persentase dan tekan Enter
+# Untranslated: English text until a translator fills these in.
+	Calculation order	Calculation order
+	Alignment	Alignment
+	Always use my default zoom and page layout	Always use my default zoom and page layout
+	Back to Prepare a form	Back to Prepare a form
+	Bulleted list	Bulleted list
+	Drag a field to move it, or select it and press {up} or {down}.	Drag a field to move it, or select it and press {up} or {down}.
+	Earlier in calculation order	Earlier in calculation order
+	Edit {field}'s formula	Edit {field}'s formula
+	Every field calculates after the fields it reads.	Every field calculates after the fields it reads.
+	Every field outside a loop calculates after the fields it reads.	Every field outside a loop calculates after the fields it reads.
+	Fix order	Fix order
+	Larger thumbnails	Larger thumbnails
+	Later in calculation order	Later in calculation order
+	Layer options	Layer options
+	Less	Less
+	Links on page	Links on page
+	Loop	Loop
+	Missing from the calculation order saved in the PDF: other PDF viewers may not calculate it.	Missing from the calculation order saved in the PDF: other PDF viewers may not calculate it.
+	Move only what must move, so every field calculates after the fields it reads.	Move only what must move, so every field calculates after the fields it reads.
+	Moves only what must move	Moves only what must move
+	No field reads it	No field reads it
+	No order can fix a loop. Change one of the formulas.	No order can fix a loop. Change one of the formulas.
+	Not in order	Not in order
+	Numbered list	Numbered list
+	Order · top calculates first	Order · top calculates first
+	Other options	Other options
+	Paragraph spacing	Paragraph spacing
+	Printer default	Printer default
+	Reading the printer's settings…	Reading the printer's settings…
+	Reads {names}, which read it back. No order can fix a loop: change one of the formulas.	Reads {names}, which read it back. No order can fix a loop: change one of the formulas.
+	Reads {name}, which calculates later, so it shows an old value.	Reads {name}, which calculates later, so it shows an old value.
+	Reset to Initial Visibility	Reset to Initial Visibility
+	Script	Script
+	Show on the page which fields each field reads	Show on the page which fields each field reads
+	Shrink the page content to make room for the header and footer	Shrink the page content to make room for the header and footer
+	Smaller thumbnails	Smaller thumbnails
+	Subscript	Subscript
+	Superscript	Superscript
+	The document's security settings don't allow printing	The document's security settings don't allow printing
+	The order saved in the PDF needs tidying	The order saved in the PDF needs tidying
+	Thumbnail size	Thumbnail size
+	Too early	Too early
+	{fields} read each other	{fields} read each other
+	{field} reads its own value	{field} reads its own value
+	{field} reads no other field	{field} reads no other field
+	{field} reads {fields}	{field} reads {fields}
+	{names} and {last}	{names} and {last}
+
+# Prepare a form ▸ Text field table (AI-assisted, not separately native-reviewed)
+	Add text field table	Tambahkan tabel kolom teks
+	Text field table	Tabel kolom teks
+	Text Field Table	Tabel Kolom Teks
+	Columns	Lajur
+	Row spacing	Jarak antarbaris
+	Column spacing	Jarak antarlajur
+	First row number	Nomor baris pertama
+	Column widths	Lebar lajur
+	Distribute evenly	Bagi rata
+	Field names	Nama kolom
+	N or {row} is the row number, {col} the column number, {seq} the cell number. With none of them, the row number goes last.	N atau {row} adalah nomor baris, {col} nomor lajur, {seq} nomor sel. Tanpa satu pun, nomor baris diletakkan di akhir.
+	Column {n}	Lajur {n}
+	Add fields	Tambahkan kolom
+	a table has 1 to {max} rows	tabel memiliki 1 sampai {max} baris
+	a table has 1 to {max} columns	tabel memiliki 1 sampai {max} lajur
+	the first row number can be at most {max}	nomor baris pertama paling besar {max}
+	the area, the spacing and the column widths must be numbers, the spacing 0 or more and each width more than 0	area, jarak, dan lebar lajur harus berupa angka, jarak 0 atau lebih dan setiap lebar lebih dari 0
+	the rows are too short: make the area taller, or use fewer rows or less row spacing	baris terlalu pendek: buat area lebih tinggi, atau gunakan lebih sedikit baris atau jarak antarbaris yang lebih kecil
+	a column is too narrow: make the area wider, give the column more of it, or use fewer columns or less column spacing	lajur terlalu sempit: buat area lebih lebar, beri lajur itu bagian yang lebih besar, atau gunakan lebih sedikit lajur atau jarak antarlajur yang lebih kecil
+	field names can't contain a period: {name}	nama kolom tidak boleh berisi titik: {name}
+	two cells would both be named {name}	dua sel akan sama-sama bernama {name}
+	a field named {name} already exists	kolom bernama {name} sudah ada
+
+# Date picker: Today button (#4274) (AI-assisted, not separately native-reviewed)
+	Today	Hari ini
+
+# AI-assisted additions for restoring the last view (#1767) (2026-10-22); not reviewed by a native speaker.
+	Restore the last view (page, zoom and page display) when a document is opened again	Pulihkan tampilan terakhir (halaman, zoom, dan tampilan halaman) saat dokumen dibuka lagi
+	Attach a file…	Lampirkan file…
+	Attach {name}	Lampirkan {name}
+	Attaching files is not available on the web yet	Melampirkan file belum tersedia di web
+	Delete attachment	Hapus lampiran
+	Delete attachment {key}	Hapus lampiran {key}
+@plural	{n} reply|{n} replies	{n} balasan
+
+# Pages panel: the Page tools menu (#4415) (AI-assisted, not separately native-reviewed)
+	Page tools	Alat halaman
+	Insert pages from a file after the selection…	Sisipkan halaman dari file setelah pilihan…
+	Rotate the selected pages counterclockwise	Putar halaman yang dipilih berlawanan arah jarum jam
+	Rotate the selected pages clockwise	Putar halaman yang dipilih searah jarum jam
+	Extract the selected pages…	Ekstrak halaman yang dipilih…
+	Delete the selected pages	Hapus halaman yang dipilih

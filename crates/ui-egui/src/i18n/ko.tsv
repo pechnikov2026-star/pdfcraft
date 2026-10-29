@@ -117,6 +117,8 @@
 	Next view	다음 보기
 	Page display	페이지 표시
 	Continuous scrolling	연속 스크롤
+	Show gaps between pages	페이지 사이 간격 표시
+	Hide gaps to join page edges. Margins inside the PDF remain unchanged.	간격을 숨겨 페이지 가장자리를 잇습니다. PDF 안의 여백은 바뀌지 않습니다.
 	Two-page view	두 페이지 보기
 	Single page	단일 페이지
 	Show cover page in two-page view	두 페이지 보기에서 표지 표시
@@ -160,6 +162,15 @@
 	Available	사용 가능
 	Ready	준비됨
 	Search tools and commands…	도구 및 명령 검색…
+
+# Accessible names for inputs that have no visible label.
+	Added text	추가한 텍스트
+	Link URL	링크 URL
+	Search tools and commands	도구 및 명령 검색
+	Text editing line	텍스트 편집 줄
+	Text to place	배치할 텍스트
+	Tooltip	도구 설명
+	Words or phrases to redact	민감 정보를 제거할 단어 또는 구문
 	No matching tools	일치하는 도구가 없습니다
 	Tool	도구
 	Command	명령
@@ -556,6 +567,7 @@
 	Discard private data of other applications	다른 응용 프로그램의 개인 데이터 삭제
 	Discard hidden text	숨겨진 텍스트 삭제
 	Use Flate to encode streams that are not encoded	인코딩되지 않은 스트림을 Flate로 인코딩
+	In streams that use LZW encoding, use Flate instead	LZW 인코딩 스트림을 Flate로 인코딩
 	Remove invalid links and bookmarks	잘못된 링크 및 책갈피 제거
 	Remove unreferenced named destinations	참조되지 않은 이름이 지정된 대상 제거
 	Compress document structure (object streams)	문서 구조 압축(개체 스트림)
@@ -1959,6 +1971,10 @@
 	Perimeter	둘레
 	Area	면적
 	Drawing scale	도면 축척
+	Scale	축척
+	Common scales	자주 쓰는 축척
+	Enter a scale such as 1:50.	1:50과 같은 축척을 입력하세요.
+	Applying a scale switches units to m / mm.	축척을 적용하면 단위가 m / mm로 바뀝니다.
 	Snapping	스냅
 	Export measurements	측정값 내보내기
 	Open a PDF to measure it.	측정할 PDF를 여세요.
@@ -2248,6 +2264,8 @@ key	Space	스페이스
 	Printer paper and scaling may differ. Check driver settings.	프린터 용지와 배율이 다를 수 있습니다. 드라이버 설정을 확인하세요.
 	Drawing scale changes. Use Actual size for full-scale plans.	도면 축척이 변경됩니다. 실제 크기 도면에는 '실제 크기'를 사용하세요.
 	Reload documents when their files change on disk	파일이 디스크에서 변경되면 문서 다시 불러오기
+	Don't show again	다시 표시 안 함
+	Show a notice when a document is secured	문서가 보호되어 있으면 알림 표시
 	This file changed on disk. Reload it to see the new version; your unsaved changes will be lost.	이 파일이 디스크에서 변경되었습니다. 새 버전을 보려면 다시 불러오세요. 저장하지 않은 변경 내용은 손실됩니다.
 	Reload	다시 불러오기
 	Couldn't reload {name}: {e}	{name}을(를) 다시 불러올 수 없습니다: {e}
@@ -2673,6 +2691,106 @@ certificate	SHA-256 digest	SHA-256 다이제스트
 	Make properties default	속성을 기본값으로 설정
 	Pages selected	선택한 페이지
 	Page properties	페이지 속성
+	Create & Edit	만들기 및 편집
+	Review & Compare	검토 및 비교
+	Forms & Signatures	양식 및 서명
+	Protect & Standardize	보호 및 표준화
+	Customize & Automate	사용자 지정 및 자동화
+	No tools match your search.	검색과 일치하는 도구가 없습니다.
+	Expand all tools	모든 도구 펼치기
+	Collapse all tools	모든 도구 접기
 	The password must have at least 8 characters.	암호는 8자 이상이어야 합니다.
 theme	Appearance	모양
 	Zoom — type a percentage and press Enter	줌 — 백분율을 입력하고 Enter를 누르세요
+# Untranslated: English text until a translator fills these in.
+	Calculation order	Calculation order
+	Alignment	Alignment
+	Always use my default zoom and page layout	Always use my default zoom and page layout
+	Back to Prepare a form	Back to Prepare a form
+	Bulleted list	Bulleted list
+	Drag a field to move it, or select it and press {up} or {down}.	Drag a field to move it, or select it and press {up} or {down}.
+	Earlier in calculation order	Earlier in calculation order
+	Edit {field}'s formula	Edit {field}'s formula
+	Every field calculates after the fields it reads.	Every field calculates after the fields it reads.
+	Every field outside a loop calculates after the fields it reads.	Every field outside a loop calculates after the fields it reads.
+	Fix order	Fix order
+	Larger thumbnails	Larger thumbnails
+	Later in calculation order	Later in calculation order
+	Layer options	Layer options
+	Less	Less
+	Links on page	Links on page
+	Loop	Loop
+	Missing from the calculation order saved in the PDF: other PDF viewers may not calculate it.	Missing from the calculation order saved in the PDF: other PDF viewers may not calculate it.
+	Move only what must move, so every field calculates after the fields it reads.	Move only what must move, so every field calculates after the fields it reads.
+	Moves only what must move	Moves only what must move
+	No field reads it	No field reads it
+	No order can fix a loop. Change one of the formulas.	No order can fix a loop. Change one of the formulas.
+	Not in order	Not in order
+	Numbered list	Numbered list
+	Order · top calculates first	Order · top calculates first
+	Other options	Other options
+	Paragraph spacing	Paragraph spacing
+	Printer default	Printer default
+	Reading the printer's settings…	Reading the printer's settings…
+	Reads {names}, which read it back. No order can fix a loop: change one of the formulas.	Reads {names}, which read it back. No order can fix a loop: change one of the formulas.
+	Reads {name}, which calculates later, so it shows an old value.	Reads {name}, which calculates later, so it shows an old value.
+	Reset to Initial Visibility	Reset to Initial Visibility
+	Script	Script
+	Show on the page which fields each field reads	Show on the page which fields each field reads
+	Shrink the page content to make room for the header and footer	Shrink the page content to make room for the header and footer
+	Smaller thumbnails	Smaller thumbnails
+	Subscript	Subscript
+	Superscript	Superscript
+	The document's security settings don't allow printing	The document's security settings don't allow printing
+	The order saved in the PDF needs tidying	The order saved in the PDF needs tidying
+	Thumbnail size	Thumbnail size
+	Too early	Too early
+	{fields} read each other	{fields} read each other
+	{field} reads its own value	{field} reads its own value
+	{field} reads no other field	{field} reads no other field
+	{field} reads {fields}	{field} reads {fields}
+	{names} and {last}	{names} and {last}
+
+# Prepare a form ▸ Text field table (AI-assisted, not separately native-reviewed)
+	Add text field table	텍스트 필드 표 추가
+	Text field table	텍스트 필드 표
+	Text Field Table	텍스트 필드 표
+	Columns	열
+	Row spacing	행 간격
+	Column spacing	열 간격
+	First row number	첫 행 번호
+	Column widths	열 너비
+	Distribute evenly	균등하게 분배
+	Field names	필드 이름
+	N or {row} is the row number, {col} the column number, {seq} the cell number. With none of them, the row number goes last.	N 또는 {row}는 행 번호, {col}은 열 번호, {seq}는 셀 번호입니다. 아무것도 없으면 행 번호가 끝에 붙습니다.
+	Column {n}	열 {n}
+	Add fields	필드 추가
+	a table has 1 to {max} rows	표의 행 수는 1~{max}개입니다
+	a table has 1 to {max} columns	표의 열 수는 1~{max}개입니다
+	the first row number can be at most {max}	첫 행 번호는 최대 {max}입니다
+	the area, the spacing and the column widths must be numbers, the spacing 0 or more and each width more than 0	영역, 간격, 열 너비는 숫자여야 하며 간격은 0 이상, 각 너비는 0보다 커야 합니다
+	the rows are too short: make the area taller, or use fewer rows or less row spacing	행이 너무 낮습니다: 영역을 더 높게 하거나 행 수 또는 행 간격을 줄이세요
+	a column is too narrow: make the area wider, give the column more of it, or use fewer columns or less column spacing	열이 너무 좁습니다: 영역을 더 넓게 하거나, 열에 더 많은 너비를 주거나, 열 수 또는 열 간격을 줄이세요
+	field names can't contain a period: {name}	필드 이름에는 마침표를 쓸 수 없습니다: {name}
+	two cells would both be named {name}	두 셀의 이름이 모두 {name}이(가) 됩니다
+	a field named {name} already exists	{name}(이)라는 필드가 이미 있습니다
+
+# Date picker: Today button (#4274) (AI-assisted, not separately native-reviewed)
+	Today	오늘
+
+# AI-assisted additions for restoring the last view (#1767) (2026-10-22); not reviewed by a native speaker.
+	Restore the last view (page, zoom and page display) when a document is opened again	문서를 다시 열 때 마지막 보기(페이지, 확대/축소, 페이지 표시) 복원
+	Attach a file…	파일 첨부…
+	Attach {name}	{name} 첨부
+	Attaching files is not available on the web yet	웹에서는 아직 파일을 첨부할 수 없습니다
+	Delete attachment	첨부 파일 삭제
+	Delete attachment {key}	첨부 파일 {key} 삭제
+@plural	{n} reply|{n} replies	답글 {n}개
+
+# Pages panel: the Page tools menu (#4415) (AI-assisted, not separately native-reviewed)
+	Page tools	페이지 도구
+	Insert pages from a file after the selection…	선택 영역 뒤에 파일에서 페이지 삽입…
+	Rotate the selected pages counterclockwise	선택한 페이지를 시계 반대 방향으로 회전
+	Rotate the selected pages clockwise	선택한 페이지를 시계 방향으로 회전
+	Extract the selected pages…	선택한 페이지 추출…
+	Delete the selected pages	선택한 페이지 삭제
